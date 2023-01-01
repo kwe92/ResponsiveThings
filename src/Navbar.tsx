@@ -5,6 +5,8 @@ import { Dropdown } from "./Dropdown";
 
 const Navbar = (props:{})=>{
 
+    
+
     const dropdownListItems = 
     <>
         <li><a href="/">Dropdown 1</a></li>
@@ -13,39 +15,52 @@ const Navbar = (props:{})=>{
         <li><a href="/">Dropdown 4</a></li>
     </>
 
-    return   (
-        <styles.Navebar>
-            {/* LOGO */}
-            <styles.Logo>Github Finder</styles.Logo>
-    
-            {/* Navigation Menu */}
-            <styles.UlNavLinks>
-                {/* Checkbox Hack */}
-                {/* Create a custom styled component with a media qurey to display later  */}
-                <div style={{display:"none"}}>
-                <input type={"checkbox"} id="checkbox_toggle"></input>
-                <label>&#9776;</label>
-                </div>
-
-                {/* Navigation Menus */}
-               <styles.Menu>
+    const menu = <>
+    {/* Navigation Menus START */}
+    <styles.Menu>
                <li><a href="/">Home</a></li>
                 <li><a href="/">About</a></li>
                 <li>
+
+                {/* Nested Menu: Service START */}
                     <styles.DropdownWrapper>
                     <styles.ServiceWrapper href="/">
                         Services
                     </styles.ServiceWrapper>     
-                    {/* Dropdown Menu */}
+                    {/* Service Sub Menu*/}
                     <Dropdown>
                         {dropdownListItems}
                     </Dropdown>
                     </styles.DropdownWrapper>
+                {/* Nested Menu: Service END */}
+                
                 </li>
                 <li><a href="/">Pricing</a></li>
                 <li><a href="/">Contact</a></li>
                </styles.Menu>
+    </>
+
+    return   (
+        <styles.Navebar>
+            {/* LOGO */}
+            <styles.Logo>Github Finder</styles.Logo>
+            {/* Navigation Menu START*/}
+            <styles.UlNavLinks>
+
+                {/* Hamburger Menu Nav START */}
+                <styles.DropdownWrapper>
+                <styles.HamburgerMenu>&#9776;</styles.HamburgerMenu>
+                <Dropdown>
+                        {dropdownListItems}
+                    </Dropdown>
+                </styles.DropdownWrapper>
+                {/* END */}
+                {menu}
+                
             </styles.UlNavLinks>
+               {/*  Navigation Menus END */}
+
+
         </styles.Navebar>
     );
 }

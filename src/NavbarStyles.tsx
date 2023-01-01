@@ -5,6 +5,8 @@ export const Navebar = styled.nav`
 
   display: flex;
 
+  height: 5rem;
+
   align-items: center;
 
   justify-content: space-between;
@@ -51,6 +53,10 @@ export const Menu = styled.div`
     border-radius: 5px;
 
   }
+
+  @media(max-width:768px){
+    display: none;
+  }
 `;
 
 export const ServiceWrapper = styled.a`
@@ -60,12 +66,15 @@ position: relative;
 `;
 
 export const DropdownWrapper = styled.div`
+
 `;
 
 
 export const StyledDropdown = styled.ul`
 
 background-color: #3259b3;
+
+// background-color: rgba(50, 89, 179, 0.7);
 
 padding: 1em 0;
 
@@ -84,6 +93,37 @@ li + li {
 ${DropdownWrapper}:hover & {
   display: block;
 }
+
+li {
+  padding: 0.5em 1em;
+
+  width: 8em;
+
+  text-align:center;
+}
+
+li: hover{
+
+  // Orange
+  background: #ff9e00;
+}
+
+@media(max-width:768px){
+  position: relative;
+}
+`;
+
+export const HamburgerMenu = styled.label`
+
+display: none;
+
+position: relative;
+
+@media (max-width:768px) {
+  display: block;
+}
+
+font-size: 2.5rem;
 `;
 
 
