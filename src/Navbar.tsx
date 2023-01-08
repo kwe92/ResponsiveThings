@@ -16,7 +16,7 @@ const Navbar = (props:{})=>{
     </>
 
     const menu = <>
-    {/* Navigation Menus START */}
+    {/* Navigation Menus */}
     <styles.Menu>
                <li><a href="/">Home</a></li>
                 <li><a href="/">About</a></li>
@@ -47,16 +47,18 @@ const Navbar = (props:{})=>{
             {/* Navigation Menu START*/}
             <styles.UlNavLinks>
 
-                {/* Hamburger Menu Nav START */}
+                {/* Hamburger Menu NAV START */}
                 <styles.DropdownWrapper>
                 <styles.HamburgerMenu>&#9776;</styles.HamburgerMenu>
                 <Dropdown>
-                        {dropdownListItems}
-                    </Dropdown>
+                    {dropdownListItems}
+                 </Dropdown>
                 </styles.DropdownWrapper>
                 {/* END */}
+
+                {/* NAV Links */}
                 {menu}
-                
+
             </styles.UlNavLinks>
                {/*  Navigation Menus END */}
 

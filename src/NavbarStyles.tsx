@@ -70,11 +70,11 @@ export const DropdownWrapper = styled.div`
 `;
 
 
-export const StyledDropdown = styled.ul`
+export const StyledDropdown = styled.ul<{Secondary?:boolean}>`
 
 background-color: #3259b3;
 
-// background-color: rgba(50, 89, 179, 0.7);
+// background-color: ${props=>props.Secondary ? "blue" : "rgba(50, 89, 179, 0.7)"};
 
 padding: 1em 0;
 

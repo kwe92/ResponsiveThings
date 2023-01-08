@@ -2,6 +2,11 @@ import { stringify } from "querystring";
 import React from "react";
 
 // Types (interface, type, class keyword | can all be diffrent was to represent a named object)
+//  - Types are "duck typed" in typescript
+//  - duck typing only checks if the shape of the object matches
+//    rather than checking if an object is of a specific type name
+
+// Example | Working with Employee types (interface, type, class...all diffrent yet all the same):
 
 interface Employee {
     firstname: string;
