@@ -34,7 +34,7 @@ class VirtualEmployee {
 };
 
 const getFirstName: Function = (props:{employee: Employee}) =>
-     props.employee.firstname;
+     {return props.employee.firstname;}
 
 const emp1: Employee = {
     firstname: "Kweayon",
